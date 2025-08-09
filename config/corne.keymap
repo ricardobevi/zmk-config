@@ -63,16 +63,19 @@
         };
     };
 
+    macros {
+        a_tilde: a_tilde {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(E) &kp A>;
+            label = "A_TILDE";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
-            // | SHFT |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  | ENTR |
-            // | CTRL |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   | ./, | '/" |  /* | EQU |
-            //                    | GUI | LWR | SPC |   | SPC | L2   | L1  |
-
             bindings = <
 &kp TAB         &kp Q  &kp W  &kp E     &kp R         &kp T        &kp Y      &kp U  &kp I          &kp O                  &kp P          &kp BSPC
 &kp LEFT_SHIFT  &kp A  &kp S  &kp D     &kp F         &kp G        &kp H      &kp J  &kp K          &kp L                  &kp SEMI       &kp ENTER
@@ -82,12 +85,6 @@
         };
 
         lower_layer {
-            // -----------------------------------------------------------------------------------------
-            // | SYSR |     |     |     |     |     |   |     |  1  |  2  |  3  |  0  |      |
-            // |      |     |     | UP  |     |     |   |     |  4  |  5  |  6  |     |      |
-            // |      |     | LFT | DWN | RGT |     |   |     |  7  |  8  |  9  |     |      |
-            //                    |     |     | SPC |   | SPC |     |     |
-
             bindings = <
 &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans       &trans     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N0  &trans
 &trans       &trans        &trans        &kp UP        &trans        &trans       &trans     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans  &trans
@@ -97,26 +94,13 @@
         };
 
         raise_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  &  |  %  |   |  ^  |  $  |  *  |  (  |  )  | BSPC |
-            // | CTRL |MUTE |V_UP |V_DWN|  <  |  >  |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | SPC |     | ALT |
-
             bindings = <
 &kp TAB    &kp EXCL    &kp AT             &kp HASH         &kp AMPERSAND  &kp PRCNT           &kp CARET  &kp DOLLAR  &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
 &kp LCTRL  &kp C_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp LESS_THAN  &kp GREATER_THAN    &kp MINUS  &kp EQUAL   &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LSHFT  &kp TILDE   &trans             &trans           &trans         &trans              &kp UNDER  &kp PLUS    &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
+&kp LSHFT  &kp TILDE   &a_tilde           &trans           &trans         &trans              &kp UNDER  &kp PLUS    &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
                                           &kp LGUI         &trans         &kp SPACE           &kp SPACE  &trans      &kp RALT
             >;
         };
     };
 };
-
-//For new Layers
-// -----------------------------------------------------------------------------------------
-// |      |     |     |     |     |     |   |     |     |     |     |     |      |
-// |      |     |     |     |     |     |   |     |     |     |     |     |      |
-// |      |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    |     |     |     |   |     |     |     |
 
