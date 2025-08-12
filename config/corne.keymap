@@ -1,7 +1,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/pointing.h>
 
 / {
     behaviors {
@@ -183,12 +182,11 @@
 
         raise_layer {
             bindings = <
-&kp TAB    &kp EXCL    &kp AT             &kp HASH         &kp AMPERSAND  &kp PRCNT           &kp CARET  &kp DOLLAR  &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&kp LCTRL  &kp C_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp LESS_THAN  &kp GREATER_THAN    &kp MINUS  &kp EQUAL   &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LSHFT  &kp TILDE   &mmv MOVE_DOWN     &mkp LCLK        &trans         &trans              &kp UNDER  &kp PLUS    &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                                          &kp LGUI         &trans         &kp SPACE           &kp SPACE  &trans      &kp RALT
+&kp TAB    &kp EXCL    &kp AT  &kp HASH  &kp AMPERSAND  &kp PRCNT    &kp CARET  &kp DOLLAR  &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
+&kp LCTRL  &kp C_MUTE  &kp F1  &kp F2    &kp F3         &kp F4       &kp MINUS  &kp EQUAL   &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
+&kp LSHFT  &kp TILDE   &kp F1  &kp F2    &kp F3         &trans       &kp UNDER  &kp PLUS    &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
+                               &kp LGUI  &trans         &kp SPACE    &kp SPACE  &trans      &kp RALT
             >;
         };
     };
 };
-
