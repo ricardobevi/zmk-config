@@ -129,7 +129,7 @@
         };
 
         admin_layer_tog {
-            bindings = <&to 4>;
+            bindings = <&sl 4>;
             key-positions = <41 36>;
         };
 
@@ -193,10 +193,10 @@
 
         default_layer {
             bindings = <
-&kp TAB   &kp Q       &kp W         &e_tilde_b       &kp R              &kp T        &kp Y      &u_tilde_b          &i_tilde_b        &o_tilde_b    &kp P         &kp BSPC
-&kp AT    &a_tilde_b  &hml LCTRL S  &hml LEFT_GUI D  &hml LEFT_SHIFT F  &kp G        &kp H      &hmr RIGHT_SHIFT J  &hmr RIGHT_GUI K  &hmr RCTRL L  &kp COLON     &kp ENTER
-&kp HASH  &kp Z       &kp X         &kp C            &kp V              &kp B        &kp N      &kp M               &kp COMMA         &kp DOT       &kp QUESTION  &kp ESC
-                                    &trans           &tog 3             &kp SPACE    &kp ENTER  &tog 1              &tog 2
+&kp TAB      &kp Q       &kp W         &e_tilde_b       &kp R              &kp T        &kp Y      &u_tilde_b          &i_tilde_b        &o_tilde_b    &kp P         &kp BSPC
+&mt STAR AT  &a_tilde_b  &hml LCTRL S  &hml LEFT_GUI D  &hml LEFT_SHIFT F  &kp G        &kp H      &hmr RIGHT_SHIFT J  &hmr RIGHT_GUI K  &hmr RCTRL L  &kp COLON     &kp EXCL
+&kp HASH     &kp Z       &kp X         &kp C            &kp V              &kp B        &kp N      &kp M               &kp COMMA         &kp DOT       &kp QUESTION  &kp ESC
+                                       &trans           &tog 3             &kp SPACE    &kp ENTER  &tog 1              &sl 2
             >;
         };
 
@@ -223,7 +223,7 @@
 &trans  &trans  &kp F1  &kp F2   &kp F3   &trans     &trans          &msc SCRL_DOWN  &msc SCRL_UP  &trans           &trans     &trans
 &trans  &trans  &kp F9  &kp F10  &kp F11  &kp F12    &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &kp END    &kp HOME
 &trans  &trans  &trans  &trans   &trans   &trans     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &mkp LCLK  &mkp RCLK
-                        &trans   &tog 3   &trans     &trans          &trans          &trans
+                        &trans   &trans   &trans     &trans          &trans          &trans
             >;
         };
 
@@ -232,7 +232,7 @@
 &bt BT_CLR     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &trans
 &trans         &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
 &bootloader_b  &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &bootloader_b
-                                           &trans        &trans        &to 0           &to 0   &trans  &trans
+                                           &tog 4        &trans        &trans          &trans  &trans  &trans
             >;
         };
     };
