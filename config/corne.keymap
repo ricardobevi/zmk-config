@@ -84,15 +84,6 @@
 
             tapping-term-ms = <250>;
         };
-
-        bootloader_b: bootloader_b {
-            compatible = "zmk,behavior-tap-dance";
-            label = "BOOTLOADER_B";
-            #binding-cells = <0>;
-            bindings = <&none>, <&none>, <&bootloader_b>;
-
-            tapping-term-ms = <250>;
-        };
     };
 
     combos {
@@ -229,10 +220,10 @@
 
         admin_layer {
             bindings = <
-&bt BT_CLR     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &trans
-&trans         &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&bootloader_b  &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &bootloader_b
-                                           &tog 4        &trans        &trans          &trans  &trans  &trans
+&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &trans
+&trans       &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&bootloader  &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &bootloader
+                                         &trans        &trans        &trans          &trans  &trans  &trans
             >;
         };
     };
