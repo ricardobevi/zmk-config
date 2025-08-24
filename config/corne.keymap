@@ -120,7 +120,7 @@
         };
 
         admin_layer_tog {
-            bindings = <&sl 4>;
+            bindings = <&sl 5>;
             key-positions = <41 36>;
         };
 
@@ -132,6 +132,36 @@
         less_than {
             bindings = <&kp LESS_THAN>;
             key-positions = <24 25>;
+        };
+
+        semicolon {
+            bindings = <&kp SEMICOLON>;
+            key-positions = <32 33>;
+        };
+
+        underscore {
+            bindings = <&kp UNDERSCORE>;
+            key-positions = <21 22>;
+        };
+
+        dash {
+            bindings = <&kp MINUS>;
+            key-positions = <22 23>;
+        };
+
+        double_quotes {
+            bindings = <&kp DOUBLE_QUOTES>;
+            key-positions = <14 15>;
+        };
+
+        pipe {
+            bindings = <&kp PIPE>;
+            key-positions = <8 20>;
+        };
+
+        slash {
+            bindings = <&kp SLASH>;
+            key-positions = <19 8>;
         };
     };
 
@@ -184,46 +214,55 @@
 
         default_layer {
             bindings = <
-&kp TAB      &kp Q       &kp W         &e_tilde_b       &kp R              &kp T        &kp Y       &u_tilde_b          &i_tilde_b        &o_tilde_b    &kp P         &kp BSPC
-&mt STAR AT  &a_tilde_b  &hml LCTRL S  &hml LEFT_GUI D  &hml LEFT_SHIFT F  &kp G        &kp H       &hmr RIGHT_SHIFT J  &hmr RIGHT_GUI K  &hmr RCTRL L  &kp COLON     &kp EXCL
-&kp HASH     &kp Z       &kp X         &kp C            &kp V              &kp B        &n_tilde_b  &kp M               &kp COMMA         &kp DOT       &kp QUESTION  &kp ESC
-                                       &trans           &tog 3             &kp SPACE    &kp ENTER   &tog 1              &sl 2
+&kp TAB   &kp Q  &kp W         &kp E            &kp R              &kp T        &kp Y      &kp U               &kp I             &kp O         &kp P         &kp BSPC
+&kp AT    &kp A  &hml LCTRL S  &hml LEFT_GUI D  &hml LEFT_SHIFT F  &kp G        &kp H      &hmr RIGHT_SHIFT J  &hmr RIGHT_GUI K  &hmr RCTRL L  &kp QUESTION  &kp EXCL
+&kp HASH  &kp Z  &kp X         &kp C            &kp V              &kp B        &kp N      &kp M               &kp COMMA         &kp DOT       &kp COLON     &kp ESC
+                               &mo 4            &mo 3              &kp SPACE    &kp ENTER  &mo 1               &mo 2
             >;
         };
 
         number_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &kp N7  &kp N8  &kp N9  &kp PLUS   &kp STAR   &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp N4  &kp N5  &kp N6  &kp MINUS  &kp SLASH  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp N1  &kp N2  &kp N3  &kp N0     &kp EQUAL  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-        };
-
-        symbols_layer {
-            bindings = <
-&kp TAB    &kp EXCL   &kp AT  &kp HASH  &kp AMPERSAND  &kp PRCNT    &kp CARET  &kp DOLLAR  &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&kp LCTRL  &trans     &kp F1  &kp F2    &kp F3         &kp F4       &kp MINUS  &kp EQUAL   &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LSHFT  &kp TILDE  &kp F1  &kp F2    &kp F3         &trans       &kp UNDER  &kp PLUS    &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                              &trans    &trans         &trans       &trans     &trans      &trans
+&none  &none  &none  &none  &none  &none     &kp STAR   &kp N7  &kp N8   &kp N9  &kp MINUS  &trans
+&none  &none  &none  &none  &none  &none     &kp EQUAL  &kp N4  &kp N5   &kp N6  &kp N0     &kp COLON
+&none  &none  &none  &none  &none  &none     &kp PLUS   &kp N1  &kp N2   &kp N3  &kp DOT    &kp SLASH
+                     &none  &none  &trans    &trans     &trans  &kp ESC
             >;
         };
 
         nav_layer {
             bindings = <
-&trans  &trans  &kp F1  &kp F2   &kp F3   &trans     &trans          &msc SCRL_DOWN  &msc SCRL_UP  &trans           &trans     &trans
-&trans  &trans  &kp F9  &kp F10  &kp F11  &kp F12    &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &kp END    &kp HOME
-&trans  &trans  &trans  &trans   &trans   &trans     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &mkp LCLK  &mkp RCLK
-                        &trans   &trans   &trans     &trans          &trans          &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans          &msc SCRL_DOWN  &msc SCRL_UP  &trans           &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &kp END    &kp HOME
+&trans  &trans  &trans  &trans  &trans  &trans    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &mkp LCLK  &mkp RCLK
+                        &trans  &trans  &trans    &trans          &trans          &trans
+            >;
+        };
+
+        symbols_layer {
+            bindings = <
+&trans  &trans             &kp GRAVE         &kp CARET       &kp PERCENT      &kp MINUS    &kp STAR   &kp EQUAL      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PIPE  &trans
+&trans  &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &kp AMPS        &kp DOLLAR       &kp UNDER    &kp PLUS   &kp SLASH      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans    &trans
+&trans  &kp LESS_THAN      &kp GREATER_THAN  &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans       &kp TILDE  &kp BACKSLASH  &trans                &trans                 &trans    &trans
+                                             &trans          &trans           &trans       &trans     &trans         &trans
+            >;
+        };
+
+        tilde_layer {
+            bindings = <
+&trans  &trans    &trans  &e_tilde  &trans  &trans    &trans    &u_tilde  &i_tilde  &o_tilde  &trans  &trans
+&trans  &a_tilde  &trans  &trans    &trans  &trans    &trans    &trans    &trans    &trans    &trans  &trans
+&trans  &trans    &trans  &trans    &trans  &trans    &n_tilde  &trans    &trans    &trans    &trans  &trans
+                          &trans    &trans  &trans    &trans    &trans    &trans
             >;
         };
 
         admin_layer {
             bindings = <
-&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &trans
-&trans       &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&bootloader  &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &bootloader
-                                         &trans        &trans        &trans          &trans  &trans  &trans
+&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &none  &none  &none  &none  &none  &none
+&none        &none         &none         &none         &none         &none           &none  &none  &none  &none  &none  &none
+&bootloader  &none         &none         &none         &none         &none           &none  &none  &none  &none  &none  &bootloader
+                                         &none         &none         &none           &none  &none  &none
             >;
         };
     };
